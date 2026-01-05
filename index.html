@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head><meta charset="UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="pingback" href="/xmlrpc.php">
+        <title>Steven Ensslen – Automation for Business Intelligence</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//jetpack.wordpress.com">
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//public-api.wordpress.com">
+<link rel="dns-prefetch" href="//0.gravatar.com">
+<link rel="dns-prefetch" href="//1.gravatar.com">
+<link rel="dns-prefetch" href="//2.gravatar.com">
+<link rel="alternate" type="application/rss+xml" title="Steven Ensslen » Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Steven Ensslen » Comments Feed" href="/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.9" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="wp-block-heading-inline-css" type="text/css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-list-inline-css" type="text/css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css" type="text/css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="bootstrap-css" href="/wp-content/themes/simpleshift/assets/css/bootstrap.min.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/simpleshift/assets/css/font-awesome.min.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="simpleshift-raleway-css" href="//fonts.googleapis.com/css?family=Raleway%3A400%2C100%2C200%2C300%2C500%2C700&amp;ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="simpleshift-lato-css" href="//fonts.googleapis.com/css?family=Lato%3A400%2C100%2C300%2C700%2C100italic%2C300italic%2C400italic&amp;ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="simpleshift-style-css" href="/wp-content/themes/simpleshift/style.css?ver=6.9" type="text/css" media="all">
+<link rel="stylesheet" id="kirki-styles-simpleshift-config-css" href="/wp-content/themes/simpleshift/inc/kirki/assets/css/kirki-styles.css" type="text/css" media="all">
+<style id="kirki-styles-simpleshift-config-inline-css" type="text/css">
+.frontpage-banner{background-color:#ea940d;}
+/*# sourceURL=kirki-styles-simpleshift-config-inline-css */
+</style>
+<link rel="stylesheet" id="jetpack_css-css" href="/wp-content/plugins/jetpack/css/jetpack.css?ver=10.5.3" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/260"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9">
+<link rel="canonical" href="/">
+<link rel="shortlink" href="https://wp.me/P7lcqU-4c">
+<style type="text/css">img#wpstats{display:none}</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f6e5c4; }
+</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Steven Ensslen">
+<meta property="og:description" content="Automation for Business Intelligence">
+<meta property="og:url" content="/">
+<meta property="og:site_name" content="Steven Ensslen">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:image:alt" content="">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:text:title" content="Home">
+<meta name="twitter:card" content="summary">
+
+<!-- End Jetpack Open Graph Tags -->
+<style type="text/css" id="wp-custom-css">/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+a {text-decoration:underline}</style>        
+    </head>
+    <body data-rsssl="1" class="home wp-singular page-template page-template-landing page-template-landing-php page page-id-260 custom-background wp-theme-simpleshift" id="home">
+        <header>
+            <div class="container">
+                <nav id="menu_row" class="navbar navbar-default inbanner" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                Steven Ensslen            </a>
+        </div>
+                    <p id="social_buttons" class="text-right">
+                                                    <a target="_blank" href="/feed/"><i class="fa fa-rss"></i></a>
+                            </p>
+                <div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-top-menu" class="nav navbar-nav"><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-145 active"><a title="Home" href="/">Home</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-287"><a title="Blog" href="/blog/">Blog</a></li>
+<li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-288 active"><a title="About" class="scrolltrue" href="##about">About</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a title="Contact" href="/contact/">Contact</a></li>
+</ul></div>    </div>
+</nav>
+
+              </div>
+        </header>
+                        <section class="ssbanner frontpage-banner parallax_active" data-parallax="scroll" data-image-src="/wp-content/uploads/2016/04/20160403_125408.jpg" style="background: rgba(0, 0, 0, 0.35);">
+            <div class="container">
+                <div class="banner-wrap" data-sr="wait 0.4s, scale up 25%">
+                                            <div class="banner-title titlefamily">Steven Ensslen</div>
+                                                                <div class="banner-sub-title titlefamily">Automation for Business Intelligence</div>
+                                                        </div>      
+            </div>    
+        </section>  
+     
+    <section id="featured" class="frontpage-featured frontpage-row">
+        <div class="container">
+            <div class="row frontpage_featured row-centered">
+                                	<div class="col-sm-4 col-centered featured">
+                		<h4>“Machines work, people should think”</h4>			<div class="textwidget"><p>The curious thing about machine learning is how much human effort goes into practicing it.  Before we apply sophisticated statistical mathematics and powerful computers to our data, people spend days, weeks, or more transforming and cleansing the data.  These data preparation steps are almost always performed "by hand" and usually with little governance.</p>
+<p>A similar trend applies to the output.  Automated tracking, deployment, or even versioning of the statistical models and their various predictions is unusual.</p>
+<p>The good news is that all of these are problems that "ordinary" software development encountered decades ago.  We, as an industry, know how and why to improve these details.   Automation of the transformation, of testing, and of deployment result in repeatable and reliable process, reduced turn-around-time, and better outcomes.</p>
+<p>In hindsight all of this will seem obvious.  My posts on this blog will describe how to automate the error-prone drudgery out of business intelligence, so that you have time to think.</p>
+</div>
+		                	</div>
+                                                	<div class="col-sm-4 col-centered featured">
+                		<style>.rpwe-block ul{
+list-style: none !important;
+margin-left: 0 !important;
+padding-left: 0 !important;
+}
+
+.rpwe-block li{
+border-bottom: 1px solid #eee;
+margin-bottom: 10px;
+padding-bottom: 10px;
+list-style-type: none;
+}
+
+.rpwe-block a{
+display: inline !important;
+text-decoration: none;
+}
+
+.rpwe-block h3{
+background: none !important;
+clear: none;
+margin-bottom: 0 !important;
+margin-top: 0 !important;
+font-weight: 400;
+font-size: 18px !important;
+line-height: 1.5em;
+}
+
+.rpwe-thumb{
+border: 1px solid #eee !important;
+box-shadow: none !important;
+margin: 2px 10px 2px 0;
+padding: 3px !important;
+}
+
+.rpwe-summary{
+font-size: 16px;
+}
+
+.rpwe-time{
+color: #bbb;
+font-size: 11px;
+}
+
+.rpwe-comment{
+color: #bbb;
+font-size: 11px;
+padding-left: 5px;
+}
+
+.rpwe-alignleft{
+display: inline;
+float: left;
+}
+
+.rpwe-alignright{
+display: inline;
+float: right;
+}
+
+.rpwe-aligncenter{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.rpwe-clearfix:before,
+.rpwe-clearfix:after{
+content: "";
+display: table !important;
+}
+
+.rpwe-clearfix:after{
+clear: both;
+}
+
+.rpwe-clearfix{
+zoom: 1;
+}
+</style><h4><a href="/category/technical/" title="Technical Talk">Technical Talk</a></h4><div class="rpwe-block "><ul class="rpwe-ul"><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/how-to-create-a-cloud-formation-parameter-file-from-a-deployed-stack/" title="Permalink to How to create a Cloud Formation parameter file from a deployed stack" rel="bookmark">How to create a Cloud Formation parameter file from a deployed stack</a></h3><time class="rpwe-time published" datetime="2019-01-17T11:15:12+13:00">January 17, 2019</time><div class="rpwe-summary">If you’re deploying AWS resources using Cloud Formation from the Command Line Interface (CLI), as many of us do in our code pipelines, then you’ll know the value of having<a href="/how-to-create-a-cloud-formation-parameter-file-from-a-deployed-stack/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/database-migrations-for-redshift-using-codestar-and-flyway/" title="Permalink to Database Migrations for Redshift using Codestar and Flyway" rel="bookmark">Database Migrations for Redshift using Codestar and Flyway</a></h3><time class="rpwe-time published" datetime="2018-12-07T14:22:54+13:00">December 7, 2018</time><div class="rpwe-summary">Continuous Integration (CI) and Continuous Deployment (CD) for databases is a lot harder than those things are for stateless applications. I still regularly meet teams who are deploying their database<a href="/database-migrations-for-redshift-using-codestar-and-flyway/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/how-to-fix-provisioning-fault-codebuild-is-experiencing-issues/" title="Permalink to How to fix “PROVISIONING Fault : CodeBuild is experiencing issues”" rel="bookmark">How to fix “PROVISIONING Fault : CodeBuild is experiencing issues”</a></h3><time class="rpwe-time published" datetime="2018-09-21T09:46:42+12:00">September 21, 2018</time><div class="rpwe-summary">I recently moved a codebuild project into a VPC. It started having a fault in the provisioning stage, with the message “CodeBuild is experiencing issues”. To my surprise I did<a href="/how-to-fix-provisioning-fault-codebuild-is-experiencing-issues/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/which-punctuation-characters-are-permitted-in-aws-iam-passwords/" title="Permalink to Which punctuation characters are permitted in AWS IAM passwords?" rel="bookmark">Which punctuation characters are permitted in AWS IAM passwords?</a></h3><time class="rpwe-time published" datetime="2018-09-07T12:16:42+12:00">September 7, 2018</time><div class="rpwe-summary">There are two mistakes that I make regularly in AWS: 1. Adding capability to a resource, then testing the updated resource before I’ve deployed the updated IAM permissions. 2. Using<a href="/which-punctuation-characters-are-permitted-in-aws-iam-passwords/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/how-to-filter-aggregates-in-kibana/" title="Permalink to How to filter aggregates in Kibana" rel="bookmark">How to filter aggregates in Kibana</a></h3><time class="rpwe-time published" datetime="2018-04-16T17:03:33+12:00">April 16, 2018</time><div class="rpwe-summary">I’m still quite enamored with Kibana. If you’re trying to do what Kibana was intended to do, and I often am, then it is like magic. Unfortunately the trade off<a href="/how-to-filter-aggregates-in-kibana/" class="more-link">... Read More »</a></div></li></ul></div><!-- Generated by http://wordpress.org/plugins/recent-posts-widget-extended/ -->                	</div>
+                                                	<div class="col-sm-4 col-centered featured">
+                		<style>.rpwe-block ul{
+list-style: none !important;
+margin-left: 0 !important;
+padding-left: 0 !important;
+}
+
+.rpwe-block li{
+border-bottom: 1px solid #eee;
+margin-bottom: 10px;
+padding-bottom: 10px;
+list-style-type: none;
+}
+
+.rpwe-block a{
+display: inline !important;
+text-decoration: none;
+}
+
+.rpwe-block h3{
+background: none !important;
+clear: none;
+margin-bottom: 0 !important;
+margin-top: 0 !important;
+font-weight: 400;
+font-size: 18px !important;
+line-height: 1.5em;
+}
+
+.rpwe-thumb{
+border: 1px solid #eee !important;
+box-shadow: none !important;
+margin: 2px 10px 2px 0;
+padding: 3px !important;
+}
+
+.rpwe-summary{
+font-size: 16px;
+}
+
+.rpwe-time{
+color: #bbb;
+font-size: 11px;
+}
+
+.rpwe-comment{
+color: #bbb;
+font-size: 11px;
+padding-left: 5px;
+}
+
+.rpwe-alignleft{
+display: inline;
+float: left;
+}
+
+.rpwe-alignright{
+display: inline;
+float: right;
+}
+
+.rpwe-aligncenter{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.rpwe-clearfix:before,
+.rpwe-clearfix:after{
+content: "";
+display: table !important;
+}
+
+.rpwe-clearfix:after{
+clear: both;
+}
+
+.rpwe-clearfix{
+zoom: 1;
+}
+</style><h4><a href="/category/book-review/" title="Reviews">Reviews</a></h4><div class="rpwe-block "><ul class="rpwe-ul"><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/reinvent-2018-data-service-highlights/" title="Permalink to re:Invent 2018 Data Service Highlights" rel="bookmark">re:Invent 2018 Data Service Highlights</a></h3><time class="rpwe-time published" datetime="2018-12-12T11:42:05+13:00">December 12, 2018</time><div class="rpwe-summary">I had the pleasure of speaking the Wellington AWS User Group last night on the announcements for data services.  Here are my personal highlights. Re:Invent 2018 Database Announcements from Steven<a href="/reinvent-2018-data-service-highlights/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/review-of-clean-architecture/" title="Permalink to Review of Clean Architecture" rel="bookmark">Review of Clean Architecture</a></h3><time class="rpwe-time published" datetime="2018-01-17T11:00:34+13:00">January 17, 2018</time><div class="rpwe-summary">Like Building Evolutionary Architectures, Clean Architecture : A Craftsman’s Guide to Software Structure and Design has given me a lot to think about. There is a paradigm shift happening in<a href="/review-of-clean-architecture/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/fitness-functions-for-architecture/" title="Permalink to Fitness Functions for Architecture" rel="bookmark">Fitness Functions for Architecture</a></h3><time class="rpwe-time published" datetime="2018-01-03T10:24:35+13:00">January 3, 2018</time><div class="rpwe-summary">I’ve just finished reading Ford’s, Parson’s, and Kua’s recent book, Building Evolutionary Architectures. Building Evolutionary Architectures is the software architecture guide for the 21st century. The couple hours that I<a href="/fitness-functions-for-architecture/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/review-of-designing-data-intensive-applications/" title="Permalink to Review of Designing Data-Intensive Applications" rel="bookmark">Review of Designing Data-Intensive Applications</a></h3><time class="rpwe-time published" datetime="2017-10-25T16:19:37+13:00">October 25, 2017</time><div class="rpwe-summary">Kleppmann‘s Designing Data-Intensive Applications is a detailed and comprehensive review of databases, in the widest definition of that term, and the way that we use them. Klepmann starts by describing<a href="/review-of-designing-data-intensive-applications/" class="more-link">... Read More »</a></div></li><li class="rpwe-li rpwe-clearfix"><h3 class="rpwe-title"><a href="/on-being-a-good-employee/" title="Permalink to On being a good employee" rel="bookmark">On being a good employee</a></h3><time class="rpwe-time published" datetime="2017-09-20T14:54:18+12:00">September 20, 2017</time><div class="rpwe-summary">I’ve just finished reading The 59-Second Employee. It’s about taking ownership of your employment, specifically in response to the now-dead 1-minute-manager technique. I read a lot of books on management.<a href="/on-being-a-good-employee/" class="more-link">... Read More »</a></div></li></ul></div><!-- Generated by http://wordpress.org/plugins/recent-posts-widget-extended/ -->                	</div>
+                 
+            </div>
+        </div> 
+    </section>
+    <section id="action1" class="frontpage-action1 frontpage-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                                            <div class="action1-title h1">Need help automating business intelligence?</div>
+                                                                                    <div class="action1-link-button"><a class="btn-simpleshift-ghost" href="/contact/">Get in touch</a></div>
+                                    </div> 
+            </div>    
+        </div>    
+    </section> 
+        <section id="about" class="frontpage-about frontpage-row">   
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                                            <div class="about-title h1">Who is Steven?</div>
+                                                                                <div class="row row-centered" data-sr="enter left and move 50px after 1s">
+                                                	<div class="col-sm-3 col-centered item">            <img class="img-responsive img-circle center-block" src="/wp-content/uploads/2017/03/headshot-e1489284332133.jpg">
+            <h4 class="team-item-title">
+                Steven Ensslen            	
+            </h4>
+            <h5 class="team-item-sub-title">
+                Principal 
+            </h5>
+            <p class="team-social-icons">
+            	            		<a href="https://www.linkedin.com/in/steven-ensslen-01b87018"><i class="fa fa-linkedin-square"></i></a>
+            	            	            		<a href="mailto:steven@stevenensslen.com"><i class="fa fa-envelope"></i></a>
+            	            	            </p>  
+		</div><div class="col-sm-3 col-centered item">			<div class="textwidget"><p>I’m one person who is passionate about computers and the way that we people interact with them.  I’m here to break down the ivory tower, to show you the insides of the sausage factory.  Because I’m only one person.  I don’t scale. I can only improve one place at a time.  I’ll share my thoughts and techniques, and together we can reduce the waste and pain in business intelligence and improve the outcomes everywhere.  Because the errors in our models increasingly impact the lives of our family, friends, and communities.  And those errors are largely human errors, stemming from the sloppy processes of our immature industry.</p>
+</div>
+		</div>                                            </div>
+                </div>
+            </div>
+        </div>
+     </section>
+  
+ 
+
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <p id="copyright">&amp;copy Steven Ensslen 2026</p>
+                </div>
+                <div class="col-md-5 col-md-offset-2 text-right">
+                    <p id="credit">SimpleShift  from <a href="http://themeshift.com/">ThemeShift</a> - Powered by <a href="http://wordpress.org/">WordPress</a></p>
+                </div>
+            </div>
+        </div>
+    </footer> 
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/simpleshift/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/bootstrap.min.js?ver=3.0.0" id="bootstrap-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/jquery.waypoints.min.js?ver=3.1.1" id="waypoints-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/scrollReveal.min.js?ver=2.3.2" id="scrollreveal-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/jquery.easing.min.js?ver=1.3" id="easing-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/sticky.min.js?ver=3.1.1" id="waypoints-sticky-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/nicescroll.min.js?ver=3.1.1" id="nicescroll-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/parallax.min.js?ver=3.1.1" id="parallax-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/public.js?ver=1.0.0" id="simpleshift_public-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<script src='https://stats.wp.com/e-202601.js' defer></script>
+<script>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:10.5.3',blog:'108487036',post:'260',tz:'13',srv:'stevenensslen.com'} ]);
+	_stq.push([ 'clickTrackerInit', '108487036', '260' ]);
+</script>
+</body>
+</html>

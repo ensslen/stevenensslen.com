@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head><meta charset="UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="pingback" href="/xmlrpc.php">
+        <title>Good use cases for SSIS – Steven Ensslen</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//jetpack.wordpress.com">
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//public-api.wordpress.com">
+<link rel="dns-prefetch" href="//0.gravatar.com">
+<link rel="dns-prefetch" href="//1.gravatar.com">
+<link rel="dns-prefetch" href="//2.gravatar.com">
+<link rel="alternate" type="application/rss+xml" title="Steven Ensslen » Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Steven Ensslen » Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Steven Ensslen » Good use cases for SSIS Comments Feed" href="/good-use-cases-for-ssis/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fgood-use-cases-for-ssis%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fgood-use-cases-for-ssis%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.9" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="bootstrap-css" href="/wp-content/themes/simpleshift/assets/css/bootstrap.min.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/simpleshift/assets/css/font-awesome.min.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="simpleshift-raleway-css" href="//fonts.googleapis.com/css?family=Raleway%3A400%2C100%2C200%2C300%2C500%2C700&amp;ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="simpleshift-lato-css" href="//fonts.googleapis.com/css?family=Lato%3A400%2C100%2C300%2C700%2C100italic%2C300italic%2C400italic&amp;ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="simpleshift-style-css" href="/wp-content/themes/simpleshift/style.css?ver=6.9" type="text/css" media="all">
+<link rel="stylesheet" id="kirki-styles-simpleshift-config-css" href="/wp-content/themes/simpleshift/inc/kirki/assets/css/kirki-styles.css" type="text/css" media="all">
+<style id="kirki-styles-simpleshift-config-inline-css" type="text/css">
+.frontpage-banner{background-color:#ea940d;}
+/*# sourceURL=kirki-styles-simpleshift-config-inline-css */
+</style>
+<link rel="stylesheet" id="jetpack_css-css" href="/wp-content/plugins/jetpack/css/jetpack.css?ver=10.5.3" type="text/css" media="all">
+<script type="text/javascript" id="jetpack_related-posts-js-extra">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+//# sourceURL=jetpack_related-posts-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/jetpack/_inc/build/related-posts/related-posts.min.js?ver=20211209" id="jetpack_related-posts-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/176"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9">
+<link rel="canonical" href="/good-use-cases-for-ssis/">
+<link rel="shortlink" href="https://wp.me/p7lcqU-2Q">
+<style type="text/css">img#wpstats{display:none}</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f6e5c4; }
+</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Good use cases for SSIS">
+<meta property="og:url" content="/good-use-cases-for-ssis/">
+<meta property="og:description" content="As a Microsoft Certified Solutions Expert in Business Intelligence, I work a lot with SQL Server Integration Services (SSIS).  Most of the SSIS code that I encounter performs tasks for which SSIS i…">
+<meta property="article:published_time" content="2016-07-03T02:36:07+00:00">
+<meta property="article:modified_time" content="2016-07-03T02:36:07+00:00">
+<meta property="og:site_name" content="Steven Ensslen">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:image:alt" content="">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:text:title" content="Good use cases for SSIS">
+<meta name="twitter:card" content="summary">
+
+<!-- End Jetpack Open Graph Tags -->
+<style type="text/css" id="wp-custom-css">/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+a {text-decoration:underline}</style>        
+    </head>
+    <body data-rsssl="1" class="wp-singular post-template-default single single-post postid-176 single-format-standard custom-background wp-theme-simpleshift" id="home">
+        <header>
+            <div class="container">
+                <nav id="menu_row" class="navbar navbar-default inbanner" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                Steven Ensslen            </a>
+        </div>
+                    <p id="social_buttons" class="text-right">
+                                                    <a target="_blank" href="/feed/"><i class="fa fa-rss"></i></a>
+                            </p>
+                <div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-top-menu" class="nav navbar-nav"><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-145"><a title="Home" href="/">Home</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-287"><a title="Blog" href="/blog/">Blog</a></li>
+<li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-288"><a title="About" href="/#about">About</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a title="Contact" href="/contact/">Contact</a></li>
+</ul></div>    </div>
+</nav>
+
+              </div>
+        </header>
+         
+            <section class="ssbanner subpage-banner parallax_active" data-parallax="scroll" data-image-src="/wp-content/uploads/2016/04/20160403_124758.jpg" style="background: rgba(0, 0, 0, 0.35);">
+            <div class="container">
+                <div class="banner-wrap" data-sr="wait 0.4s, scale up 25%">
+                    <h1 class="banner-title titlefamily">Good use cases for SSIS</h1>
+                </div>    
+            </div>    
+        </section> 
+<div class="container">    <div class="content row post-176 post type-post status-publish format-standard hentry category-theory">
+
+        <div class="col-sm-8 content-column ">
+            <div class="row single_meta">
+                <div class="col-sm-8">
+                    <p> 
+                    Posted by <a href="/author/ensslen/" title="Posts by Steven" rel="author">Steven</a> on July 3, 2016</p>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-right"><a href="/good-use-cases-for-ssis/#comments">No comments</a></p>                </div>
+            </div>
+            <p>As a <a href="https://www.microsoft.com/en-nz/learning/mcse-sql-business-intelligence.aspx">Microsoft Certified Solutions Expert in Business Intelligence</a>, I work a lot with <a href="https://msdn.microsoft.com/en-us/library/ms141026.aspx">SQL Server Integration Services</a> (SSIS).  Most of the SSIS code that I encounter performs tasks for which SSIS is <strong>not</strong> well suited.</p>
+<p>Microsoft says that <a href="https://blogs.msdn.microsoft.com/mattm/2011/07/06/the-right-tool-for-the-job/">SSIS is a niche tool</a>.  When SSIS was first envisioned, <a href="https://en.wikipedia.org/wiki/Fourth-generation_programming_language">Fourth Generation Programming Languages</a> (4GL) were a prominent paradigm.  The idea behind 4GLs was that programs could be developed more efficiently in specialised, graphical, domain-specific languages.  But <a href="https://www.quora.com/What-happened-to-4GL-programming-languages">4GLs failed</a> to deliver on that core promise, largely because they are opaque, which makes them difficult to white-box test and peer-review. It’s also very difficult to innovate in a 4GL.</p>
+<p>Many of my peers regard SSIS as the tool of last resort.  I’ve won work by being willing to consider that SSIS <em>might</em> be the right tools when others took a harder line.  The problem with SSIS is that it is harder write and test than stored procedures or C#.  Visual Studio database projects can run <a href="https://en.wikipedia.org/wiki/Static_program_analysis">static code analysis</a> (see: <a href="https://github.com/davebally/TSQL-Smells">TSQL smells</a>).  <a href="http://tsqlt.org/">tSQLt </a>is great for <a href="https://www.simple-talk.com/sql/database-administration/close-those-loopholes-lessons-learned-from-unit-testing-t-sql/">unit testing stored procedures</a>.  There are even <a href="https://the.agilesql.club/blog/Ed-Elliott/2016-01-14/T-SQL-Code-Coverage-In-SSDT">unit test coverage tools</a>.  SSIS doesn’t have any of these things.  I literally have to discover unused variables and untested features by staring at the code.  Not to mention the defects that come from concepts that don’t even exist in ordinary programming languages (disabled components come to mind).</p>
+<p>SSIS should <strong>not</strong> be used when:</p>
+<ol>
+<li><span style="color: #ff0000;">The source and destination are on the same SQL Server Instance.</span><span style="color: #ff0000;"><br>
+</span></li>
+<li><span style="color: #ff0000;">A <a style="color: #ff0000;" href="https://msdn.microsoft.com/en-us/library/ms188365.aspx">BULK INSERT</a> works (which usually true, especially now that <a style="color: #ff0000;" href="https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/">JSON support has been added in SQL 2016</a>).</span></li>
+<li><span style="color: #ff0000;">Data is streaming rather than batch.</span></li>
+<li><span style="color: #ff0000;">the source is a database to which <a style="color: #ff0000;" href="https://en.wikipedia.org/wiki/Change_data_capture">Change Data Capture</a> can be applied.</span></li>
+</ol>
+<p>I’m not saying that SSIS can’t be used for these jobs.  I am saying that there are better ways to do these jobs.</p>
+<p>Which leaves the use cases for which SSIS is well suited:</p>
+<ol>
+<li>Data that isn’t in a flat-file, XML, or JSON format.</li>
+<li>Databases that don’t support Change Data Capture.</li>
+</ol>
+<p>Most warehouses spend most of their effort in ETL.  Most warehouses can be more efficient with their ETL development effort by not using ETL tools where they aren’t necessary.</p>
+
+<div id="jp-relatedposts" class="jp-relatedposts">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div><div class="clear" style="height:0px;"></div>    <div class="line"></div>
+    <div class="row tax_tags">
+        <div class="col-xs-6 tax">
+            Posted in: <a href="/category/theory/" rel="category tag">Theory</a>        </div>
+        <div class="col-xs-6 tags">
+                    </div>
+    </div>
+    <div class="line"></div>
+<h2>Comments</h2>    <div class="nocomments">
+                    <p>Be the first to comment.</p>
+            </div>
+    <div id="respond" class="form-horizontal">
+        
+		<div id="respond" class="comment-respond">
+							<h3 id="reply-title" class="comment-reply-title">Leave a Reply					<small><a rel="nofollow" id="cancel-comment-reply-link" href="/good-use-cases-for-ssis/#respond" style="display:none;">Cancel reply</a></small>
+				</h3>
+						<form id="commentform" class="comment-form">
+				<iframe title="Comment Form" src="https://jetpack.wordpress.com/jetpack-comment/?blogid=108487036&amp;postid=176&amp;comment_registration=0&amp;require_name_email=1&amp;stc_enabled=1&amp;stb_enabled=1&amp;show_avatars=1&amp;avatar_default=mystery&amp;greeting=Leave+a+Reply&amp;greeting_reply=Leave+a+Reply+to+%25s&amp;color_scheme=light&amp;lang=en_US&amp;jetpack_version=10.5.3&amp;show_cookie_consent=10&amp;has_cookie_consent=0&amp;token_key=%3Bnormal%3B&amp;sig=d7e8a52811a4f167f291a227413d2cc7894366ef#parent=%2Fgood-use-cases-for-ssis%2F%3Fsimply_static_page%3D1482" name="jetpack_remote_comment" style="width:100%; height: 430px; border:0;" class="jetpack_remote_comment" id="jetpack_remote_comment" sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups">
+									</iframe>
+									<!--[if !IE]><!-->
+					<script>
+						document.addEventListener('DOMContentLoaded', function () {
+							var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+							for (var i = 0; i < commentForms.length; i++) {
+								commentForms[i].allowTransparency = false;
+								commentForms[i].scrolling = 'no';
+							}
+						});
+					</script>
+					<!--<![endif]-->
+							</form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="" />
+
+		    </div>
+
+<div class="line comments_on"></div>
+<div class="row single_post_nav">
+    <div class="col-md-6">
+        <a href="/responding-to-change-over-following-a-plan/" rel="prev">« Previous post link Responding to Change over Following A Plan</a>    </div>
+    <div class="col-md-6 text-right">
+        <a href="/what-should-be-analysed/" rel="next">What should be analysed? » Next post link</a>                  
+    </div>
+</div>        </div>
+        <div class="col-sm-4  sidebar">
+            <div id="search-4" class="widget widget_search widget sidebar_widget"><form method="get" id="searchform" action="//" ><input type="text" value="Search" name="s" id="s"  onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/><input type="image" id="searchsubmit" src="/wp-content/themes/simpleshift/assets/images/search_icon.png" />
+            </form></div><div id="categories-3" class="widget widget_categories widget sidebar_widget"><h3 class="widget_title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-2"><a href="/category/book-review/">Book Review</a>
+</li>
+	<li class="cat-item cat-item-69"><a href="/category/quick/">Quick</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="/category/technical/">Technical</a>
+</li>
+	<li class="cat-item cat-item-65"><a href="/category/theory/">Theory</a>
+</li>
+			</ul>
+
+			</div><div id="tag_cloud-3" class="widget widget_tag_cloud widget sidebar_widget"><h3 class="widget_title">Tags</h3><div class="tagcloud"><a href="/tag/athena/" class="tag-cloud-link tag-link-81 tag-link-position-1" style="font-size: 8pt;" aria-label="athena (1 item)">athena</a>
+<a href="/tag/aws/" class="tag-cloud-link tag-link-79 tag-link-position-2" style="font-size: 22pt;" aria-label="aws (7 items)">aws</a>
+<a href="/tag/big-data/" class="tag-cloud-link tag-link-75 tag-link-position-3" style="font-size: 12.2pt;" aria-label="big data (2 items)">big data</a>
+<a href="/tag/business-intelligence/" class="tag-cloud-link tag-link-76 tag-link-position-4" style="font-size: 8pt;" aria-label="Business Intelligence (1 item)">Business Intelligence</a>
+<a href="/tag/cli/" class="tag-cloud-link tag-link-131 tag-link-position-5" style="font-size: 8pt;" aria-label="CLI (1 item)">CLI</a>
+<a href="/tag/cloudformation/" class="tag-cloud-link tag-link-120 tag-link-position-6" style="font-size: 12.2pt;" aria-label="CloudFormation (2 items)">CloudFormation</a>
+<a href="/tag/codebuild/" class="tag-cloud-link tag-link-112 tag-link-position-7" style="font-size: 12.2pt;" aria-label="Codebuild (2 items)">Codebuild</a>
+<a href="/tag/codepipeline/" class="tag-cloud-link tag-link-119 tag-link-position-8" style="font-size: 8pt;" aria-label="CodePipeline (1 item)">CodePipeline</a>
+<a href="/tag/codestar/" class="tag-cloud-link tag-link-118 tag-link-position-9" style="font-size: 8pt;" aria-label="codestar (1 item)">codestar</a>
+<a href="/tag/data-lake/" class="tag-cloud-link tag-link-80 tag-link-position-10" style="font-size: 12.2pt;" aria-label="data lake (2 items)">data lake</a>
+<a href="/tag/dataops/" class="tag-cloud-link tag-link-132 tag-link-position-11" style="font-size: 8pt;" aria-label="dataops (1 item)">dataops</a>
+<a href="/tag/devops/" class="tag-cloud-link tag-link-116 tag-link-position-12" style="font-size: 8pt;" aria-label="devops (1 item)">devops</a>
+<a href="/tag/dynamodb/" class="tag-cloud-link tag-link-127 tag-link-position-13" style="font-size: 8pt;" aria-label="dynamodb (1 item)">dynamodb</a>
+<a href="/tag/elastic/" class="tag-cloud-link tag-link-86 tag-link-position-14" style="font-size: 8pt;" aria-label="elastic (1 item)">elastic</a>
+<a href="/tag/elasticsearch/" class="tag-cloud-link tag-link-100 tag-link-position-15" style="font-size: 12.2pt;" aria-label="elasticsearch (2 items)">elasticsearch</a>
+<a href="/tag/exactly-one-temporal-window-is-expected/" class="tag-cloud-link tag-link-105 tag-link-position-16" style="font-size: 8pt;" aria-label="Exactly one temporal window is expected (1 item)">Exactly one temporal window is expected</a>
+<a href="/tag/flyway/" class="tag-cloud-link tag-link-114 tag-link-position-17" style="font-size: 8pt;" aria-label="flyway (1 item)">flyway</a>
+<a href="/tag/glue/" class="tag-cloud-link tag-link-123 tag-link-position-18" style="font-size: 8pt;" aria-label="Glue (1 item)">Glue</a>
+<a href="/tag/govhack/" class="tag-cloud-link tag-link-84 tag-link-position-19" style="font-size: 8pt;" aria-label="govhack (1 item)">govhack</a>
+<a href="/tag/iam/" class="tag-cloud-link tag-link-111 tag-link-position-20" style="font-size: 12.2pt;" aria-label="IAM (2 items)">IAM</a>
+<a href="/tag/javascript/" class="tag-cloud-link tag-link-103 tag-link-position-21" style="font-size: 8pt;" aria-label="Javascript (1 item)">Javascript</a>
+<a href="/tag/job-title/" class="tag-cloud-link tag-link-107 tag-link-position-22" style="font-size: 8pt;" aria-label="job title (1 item)">job title</a>
+<a href="/tag/kafka/" class="tag-cloud-link tag-link-125 tag-link-position-23" style="font-size: 8pt;" aria-label="kafka (1 item)">kafka</a>
+<a href="/tag/kibana/" class="tag-cloud-link tag-link-109 tag-link-position-24" style="font-size: 12.2pt;" aria-label="Kibana (2 items)">Kibana</a>
+<a href="/tag/kinesis/" class="tag-cloud-link tag-link-122 tag-link-position-25" style="font-size: 8pt;" aria-label="kinesis (1 item)">kinesis</a>
+<a href="/tag/migration/" class="tag-cloud-link tag-link-117 tag-link-position-26" style="font-size: 8pt;" aria-label="migration (1 item)">migration</a>
+<a href="/tag/open-data/" class="tag-cloud-link tag-link-85 tag-link-position-27" style="font-size: 8pt;" aria-label="open data (1 item)">open data</a>
+<a href="/tag/pgsql/" class="tag-cloud-link tag-link-88 tag-link-position-28" style="font-size: 12.2pt;" aria-label="pgSQL (2 items)">pgSQL</a>
+<a href="/tag/quicksight/" class="tag-cloud-link tag-link-82 tag-link-position-29" style="font-size: 8pt;" aria-label="quicksight (1 item)">quicksight</a>
+<a href="/tag/reinvent/" class="tag-cloud-link tag-link-121 tag-link-position-30" style="font-size: 8pt;" aria-label="re:Invent (1 item)">re:Invent</a>
+<a href="/tag/redshift/" class="tag-cloud-link tag-link-115 tag-link-position-31" style="font-size: 8pt;" aria-label="redshift (1 item)">redshift</a>
+<a href="/tag/role/" class="tag-cloud-link tag-link-108 tag-link-position-32" style="font-size: 8pt;" aria-label="role (1 item)">role</a>
+<a href="/tag/s3/" class="tag-cloud-link tag-link-83 tag-link-position-33" style="font-size: 8pt;" aria-label="s3 (1 item)">s3</a>
+<a href="/tag/sagemaker/" class="tag-cloud-link tag-link-126 tag-link-position-34" style="font-size: 8pt;" aria-label="sagemaker (1 item)">sagemaker</a>
+<a href="/tag/sfia/" class="tag-cloud-link tag-link-106 tag-link-position-35" style="font-size: 8pt;" aria-label="SFIA (1 item)">SFIA</a>
+<a href="/tag/sql/" class="tag-cloud-link tag-link-71 tag-link-position-36" style="font-size: 17.333333333333pt;" aria-label="SQL (4 items)">SQL</a>
+<a href="/tag/test-driven-design/" class="tag-cloud-link tag-link-67 tag-link-position-37" style="font-size: 12.2pt;" aria-label="Test Driven Design (2 items)">Test Driven Design</a>
+<a href="/tag/testing/" class="tag-cloud-link tag-link-66 tag-link-position-38" style="font-size: 15pt;" aria-label="Testing (3 items)">Testing</a>
+<a href="/tag/timestream/" class="tag-cloud-link tag-link-124 tag-link-position-39" style="font-size: 8pt;" aria-label="timestream (1 item)">timestream</a>
+<a href="/tag/tools/" class="tag-cloud-link tag-link-77 tag-link-position-40" style="font-size: 8pt;" aria-label="Tools (1 item)">Tools</a>
+<a href="/tag/unit-test/" class="tag-cloud-link tag-link-70 tag-link-position-41" style="font-size: 12.2pt;" aria-label="Unit Test (2 items)">Unit Test</a>
+<a href="/tag/user-defined-aggregate/" class="tag-cloud-link tag-link-104 tag-link-position-42" style="font-size: 8pt;" aria-label="User Defined Aggregate (1 item)">User Defined Aggregate</a>
+<a href="/tag/vega/" class="tag-cloud-link tag-link-110 tag-link-position-43" style="font-size: 8pt;" aria-label="Vega (1 item)">Vega</a>
+<a href="/tag/views/" class="tag-cloud-link tag-link-94 tag-link-position-44" style="font-size: 12.2pt;" aria-label="views (2 items)">views</a>
+<a href="/tag/vpc/" class="tag-cloud-link tag-link-113 tag-link-position-45" style="font-size: 8pt;" aria-label="VPC (1 item)">VPC</a></div>
+</div><div id="rss_links-4" class="widget widget_rss_links widget sidebar_widget"><h3 class="widget_title">Feeds</h3><p><a target="_self" href="/feed/" title="Subscribe to posts"><img src="/wp-content/plugins/jetpack/images/rss/silver-medium.png" alt="RSS feed" /> RSS - Posts</a></p><p><a target="_self" href="/comments/feed/" title="Subscribe to comments"><img src="/wp-content/plugins/jetpack/images/rss/silver-medium.png" alt="RSS feed" /> RSS - Comments</a></p>
+</div>        </div>        
+    </div>
+
+                    
+
+                        
+              
+ 
+  
+</div>    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <p id="copyright">&copy Steven Ensslen 2026</p>
+                </div>
+                <div class="col-md-5 col-md-offset-2 text-right">
+                    <p id="credit">SimpleShift </a> from <a href="http://themeshift.com">ThemeShift</a> - Powered by <a href="http://wordpress.org">WordPress</a></p>
+                </div>
+            </div>
+        </div>
+    </footer> 
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/simpleshift/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.9" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/bootstrap.min.js?ver=3.0.0" id="bootstrap-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/jquery.waypoints.min.js?ver=3.1.1" id="waypoints-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/scrollReveal.min.js?ver=2.3.2" id="scrollreveal-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/jquery.easing.min.js?ver=1.3" id="easing-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/sticky.min.js?ver=3.1.1" id="waypoints-sticky-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/nicescroll.min.js?ver=3.1.1" id="nicescroll-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/parallax.min.js?ver=3.1.1" id="parallax-js"></script>
+<script type="text/javascript" src="/wp-content/themes/simpleshift/assets/js/public.js?ver=1.0.0" id="simpleshift_public-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+
+		<!--[if IE]>
+		<script type="text/javascript">
+			if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+				// window.location.reload() doesn't respect the Hash in IE
+				window.location.hash = window.location.hash;
+			}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			(function () {
+				var comm_par_el = document.getElementById( 'comment_parent' ),
+					comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+					frame = document.getElementById( 'jetpack_remote_comment' ),
+					tellFrameNewParent;
+
+				tellFrameNewParent = function () {
+					if ( comm_par ) {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=108487036&postid=176&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=10.5.3&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=d7e8a52811a4f167f291a227413d2cc7894366ef#parent=%2Fgood-use-cases-for-ssis%2F%3Fsimply_static_page%3D1482" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					} else {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=108487036&postid=176&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=10.5.3&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=d7e8a52811a4f167f291a227413d2cc7894366ef#parent=%2Fgood-use-cases-for-ssis%2F%3Fsimply_static_page%3D1482";
+					}
+				};
+
+				
+				if ( 'undefined' !== typeof addComment ) {
+					addComment._Jetpack_moveForm = addComment.moveForm;
+
+					addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+						var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+							cancelClick, cancel;
+
+						if ( false === returnValue ) {
+							cancel = document.getElementById( 'cancel-comment-reply-link' );
+							cancelClick = cancel.onclick;
+							cancel.onclick = function () {
+								var cancelReturn = cancelClick.call( this );
+								if ( false !== cancelReturn ) {
+									return cancelReturn;
+								}
+
+								if ( ! comm_par ) {
+									return cancelReturn;
+								}
+
+								comm_par = 0;
+
+								tellFrameNewParent();
+
+								return cancelReturn;
+							};
+						}
+
+						if ( comm_par == parentId ) {
+							return returnValue;
+						}
+
+						comm_par = parentId;
+
+						tellFrameNewParent();
+
+						return returnValue;
+					};
+				}
+
+				
+				// Do the post message bit after the dom has loaded.
+				document.addEventListener( 'DOMContentLoaded', function () {
+					var iframe_url = "https:\/\/jetpack.wordpress.com";
+					if ( window.postMessage ) {
+						if ( document.addEventListener ) {
+							window.addEventListener( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								frame.style.height = event.data + 'px';
+							});
+						} else if ( document.attachEvent ) {
+							window.attachEvent( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								frame.style.height = event.data + 'px';
+							});
+						}
+					}
+				})
+
+			})();
+		</script>
+
+		<script src='https://stats.wp.com/e-202601.js' defer></script>
+<script>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:10.5.3',blog:'108487036',post:'176',tz:'13',srv:'stevenensslen.com'} ]);
+	_stq.push([ 'clickTrackerInit', '108487036', '176' ]);
+</script>
+</form></div></div></div></div></div></body>
+</html>
